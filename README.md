@@ -16,7 +16,11 @@
         
         #Singleton classes :
         
-               - SingletonWebDriver
+               - SingletonWebDriver class
+
+        # Base Layer :
+
+                -BaseLayerWebDriver class
 
 # factory classes :
     # ChromeDriver class.
