@@ -1,12 +1,15 @@
-package com.maroti.common.sevices;
+package com.maroti.common.webDriver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.io.IOException;
-
-public interface MyWebDriver {
+/**
+ * @Author : Maroti Pawar
+ *
+ */
+public interface MyWebDriver extends WebDriver{
 
     void javaScriptSendKeys(WebElement element, String value);
     void javaScriptClick(WebElement element);
