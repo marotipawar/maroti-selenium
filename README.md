@@ -1,4 +1,5 @@
-#selenium-common-operations can contains :
+# Selenium-common-operations project can contains following interface and classes:
+
 1) Interface :
               It is contain only one interface .
              Name : MyWebDriver interface
