@@ -62,4 +62,14 @@
   <version>1.0.0</version>
 </dependency>
 ```
+# Using ChromeDriver factory class :
 
+```
+ public static void main(String[] args) {
+
+        MyWebDriver driver = new ChromeDriver();
+        driver.goTo("https://www.google.com");
+        driver.maximize();
+        driver.implicitWaite(30);
+    }
+```
