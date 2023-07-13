@@ -58,7 +58,7 @@
 ```
 <dependency>
   <groupId>com.maroti</groupId>
-  <artifactId>selenium-common-operations</artifactId>
+  <artifactId>maroti-selenium</artifactId>
   <version>1.0.0</version>
 </dependency>
 ```
