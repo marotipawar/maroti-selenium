@@ -12,7 +12,7 @@ import java.time.Duration;
  */
 public class BaseLayerWebDriver{
 
-    private static WebDriver driver;
+    public static WebDriver driver;
 
     public static WebDriver initialization(String name){
         if(name.equalsIgnoreCase("chrome")){
@@ -22,6 +22,7 @@ public class BaseLayerWebDriver{
         }else if(name.equalsIgnoreCase("edge")){
             driver = new EdgeDriver();
         }
+        driver.get("https://www.facebook.com");
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.manage().window().maximize();
