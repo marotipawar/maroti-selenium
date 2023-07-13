@@ -73,3 +73,11 @@
         driver.implicitWaite(30);
     }
 ```
+# Using ConcreteWebDriver class
+```
+
+        MyWebDriver driver = new ConcreteWebDriver(new ChromeDriver());
+        driver.goTo("https://www.google.com");
+        driver.maximize();
+        driver.implicitWaite(40);
+```
