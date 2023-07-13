@@ -81,3 +81,11 @@
         driver.maximize();
         driver.implicitWaite(40);
 ```
+# Using SingletonWebDriver class
+
+```
+  MyWebDriver driver=SingletonWebDriver.getInstance(new ChromeDriver());
+        driver.goTo("https://www.google.com");
+        driver.maximize();
+        driver.implicitWaite(10);
+```
