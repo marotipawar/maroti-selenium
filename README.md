@@ -1,22 +1,21 @@
 # Selenium-common-operations project can contains following interface and classes:
 
-1) Interface :
+# Interface :
               It is contain only one interface .
-             Name : MyWebDriver interface
+             # Name : MyWebDriver interface
 
-
-2) Classes :
-          -Abstract classes :
+# Classes :
+          # Abstract classes :
                1) AbstractWebDriver class
-         - concrete classes :
+         # Concrete classes :
                1) ConcreteWebDriver class
-         - Singleton classes :
+         # Singleton classes :
                1) SingletonWebDriver
 
-3) factory classes :
-    1) ChromeDriver class.
-    2) FirefoxDriver class.
-    3) EdgeDriver class.
+# factory classes :
+    # ChromeDriver class.
+    # FirefoxDriver class.
+    # EdgeDriver class.
 
     
 # MyWebDriver Interface
