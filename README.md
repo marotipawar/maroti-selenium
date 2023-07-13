@@ -1,51 +1,113 @@
-# selenium-common-operations
-This is repository is used to perform commons operation of automation testing in selenium 
-#Configuration of Package Cloud
-Packagecloud Maven Wagon
-NOTE: this is currently in beta
-Usage
-Visit packagecloud.io/api_token and get your API token before proceeding.
+** It is used to performs most common operation in Selenium Automation Testing **
 
-Install the wagon under build/extensions in your pom.xml
-  <build>
-    <extensions>
-      <extension>
-        <groupId>io.packagecloud.maven.wagon</groupId>
-        <artifactId>maven-packagecloud-wagon</artifactId>
-        <version>0.0.4</version>
-      </extension>
-    </extensions>
-    ...
-  </build>
-Set up your distributionManagment to point to your packagecloud repository, like so:
-(We are setting our snapshot and release repositories to the same, feel free to make them different)
+# maroti-selenium project can contains following interface and classes:
 
-  <distributionManagement>
-    <repository>
-      <id>packagecloud.my_repo_releases</id>
-      <url>packagecloud+http://packagecloud.dev:3000/testy/my_repo</url>
-    </repository>
-    <snapshotRepository>
-      <id>packagecloud.my_repo_snapshots</id>
-      <url>packagecloud+http://packagecloud.dev:3000/testy/my_repo</url>
-    </snapshotRepository>
-  </distributionManagement>
-Configure your password in ~/.m2/settings.xml
-Make sure the id matches up with your distributionManagement id's
+# Interface :
+              It is contain only one Interface.
+              
+             # Name : MyWebDriver Interface
 
-<settings>
-  <servers>
-    <server>
-      <id>packagecloud.my_repo_releases</id>
-      <password>47fd797eff2bbc3b4ea1879de3020269071f6cb006515e93</password>
-    </server>
-    <server>
-      <id>packagecloud.my_repo_snapshots</id>
-      <password>47fd797eff2bbc3b4ea1879de3020269071f6cb006515e93</password>
-    </server>
-  </servers>
-</settings>
-You can encrypt these passwords by following the instructions for Apache Maven Password Encryption
+# Classes :
+        #Abstract classes :
+        
+               - AbstractWebDriver class
+        
+        #Concrete classes :
+               
+               - ConcreteWebDriver class
+        
+        #Singleton classes :
+        
+               - SingletonWebDriver class
 
-mvn deploy
-That's it!
+        # Base Layer :
+
+                -BaseLayerWebDriver class
+
+# factory classes :
+    # ChromeDriver class.
+    # FirefoxDriver class.
+    # EdgeDriver class.
+
+    
+# MyWebDriver Interface
+
+- MyWebDriver interface containing browser specifice operation methods.
+- It is use to implemented classes can perform operation on web element.
+- It is customiz same as WebDriver interface.
+- We can easilly implement on our class and use specific functionality.
+
+# How to add maroti-selenium Dependency in your project following step :
+
+    # Copy bellow Repository and paste in your pom.xml file
+    
+```
+<repositories>
+  <repository>
+    <id>maroti-releases</id>
+    <url>https://packagecloud.io/maroti/releases/maven2</url>
+    <releases>
+      <enabled>true</enabled>
+    </releases>
+    <snapshots>
+      <enabled>true</enabled>
+    </snapshots>
+  </repository>
+</repositories>
+```
+
+# Add Dependency in pom.xml
+```
+<dependency>
+  <groupId>com.maroti</groupId>
+  <artifactId>maroti-selenium</artifactId>
+  <version>1.0.0</version>
+</dependency>
+```
+# Using ChromeDriver factory class :
+
+```
+ public static void main(String[] args) {
+
+        MyWebDriver driver = new ChromeDriver();
+        driver.goTo("https://www.google.com");
+        driver.maximize();
+        driver.implicitWaite(30);
+    }
+```
+# Using ConcreteWebDriver class
+```
+
+        MyWebDriver driver = new ConcreteWebDriver(new ChromeDriver());
+        driver.goTo("https://www.google.com");
+        driver.maximize();
+        driver.implicitWaite(40);
+```
+# Using SingletonWebDriver class
+
+```
+  MyWebDriver driver=SingletonWebDriver.getInstance(new ChromeDriver());
+        driver.goTo("https://www.google.com");
+        driver.maximize();
+        driver.implicitWaite(10);
+```
+
+# Using BaseLayerWebDrvier class
+```
+package com.maroti.common;
+
+import com.maroti.common.webDriverImpl.BaseLayerWebDriver;
+
+public class Login extends BaseLayerWebDriver {
+
+    public static void main(String[] args) {
+
+        initialization("chrome");
+
+    }
+}
+
+```
+
+# MyWebDriver Interface :
+ https://github.com/marotipawar/selenium-common-operations/blob/main/src/main/java/com/maroti/common/webDriver/MyWebDriver.java
