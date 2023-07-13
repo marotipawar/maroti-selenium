@@ -35,7 +35,7 @@
 - It is customiz same as WebDriver interface.
 - We can easilly implement on our class and use specific functionality.
 
-# How to add selenium-common-operations Dependency in your project following step :
+# How to add maroti-selenium Dependency in your project following step :
 
     # Copy bellow Repository and paste in your pom.xml file
     
