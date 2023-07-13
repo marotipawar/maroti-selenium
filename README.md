@@ -1,4 +1,6 @@
-# Selenium-common-operations project can contains following interface and classes:
+** It is used to performs most common operation in Selenium Automation Testing **
+
+# maroti-selenium project can contains following interface and classes:
 
 # Interface :
               It is contain only one Interface.
@@ -30,7 +32,7 @@
     
 # MyWebDriver Interface
 
-- MyWebDriver interface containing browser specifice operation method.
+- MyWebDriver interface containing browser specifice operation methods.
 - It is use to implemented classes can perform operation on web element.
 - It is customiz same as WebDriver interface.
 - We can easilly implement on our class and use specific functionality.
